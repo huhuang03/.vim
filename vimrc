@@ -57,5 +57,6 @@ set expandtab
 filetype on
 
 " tonghu's change for test and so on
-source vimrc_th
-
+if !empty(glob("~/.vim/vimrc_th"))
+    source ~/.vim/vimrc_th
+endif
