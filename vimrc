@@ -7,14 +7,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kelwin/vim-smali'
 Plugin 'vimcdoc'
-Plugin 'kien/ctrlp.vim'
-Plugin 'The-NERD-tree'
 Plugin 'taglist.vim'
 Plugin 'Auto-Pairs'
 Plugin 'file:///Users/tonghu/.vim/bundle/tonghu/'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'groenewege/vim-less'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'BtPht/python_editing'
+Plugin 'klen/python-mode'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -49,10 +53,7 @@ autocmd BufNewFile  *.php      0r ~/.vim/bundle/tonghu/skeleton.php
 
 " set tab = 4 place
 " tabstop shiftwidth expandtab softtabstop
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 filetype on
 
@@ -60,3 +61,4 @@ filetype on
 if !empty(glob("~/.vim/vimrc_th"))
     source ~/.vim/vimrc_th
 endif
+

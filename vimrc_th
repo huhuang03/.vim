@@ -1,15 +1,15 @@
 " tongh's vimrc file
 
-"   set guifont
-set guifont=Menlo\ Regular:h18
+" set guifont
+" set guifont=Menlo\ Regular:h18
 " autocmd set guifont
-"autocmd BufEnter *.txt set guifont=Arial\ 12
+" autocmd BufEnter *.txt set guifont=Arial\ 12
 
 " set highlight
 " more than 73 letters
-match ErrorMsg /\%>73v.\+/
+" match ErrorMsg /\%>73v.\+/
 " match tab use for not code
-match ErrorMsg /[^\t]\zs\t\+/
+" match ErrorMsg /[^\t]\zs\t\+/
 
 "set encoding
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
@@ -52,7 +52,37 @@ endfunction
 
 if has("autocmd")
     filetype on
-
     autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
 endif
+
+" for auto command
+" map <C-/> :Itest<Esc> 
+
+" set paste
+
+" au BufNewFile,BufRead *.less set filetype=css
+" nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+" Automatic reloading of .vimrc
+" autocmd! bufwritepost .vimrc source %
+
+" Better copy & parse
+" set pastetoggle=<F2>
+" set clipboard=unnamed
+
+" Mouse and backspace
+" set mouse=a
+" set bs=2
+
+" auto open NERDTree
+autocmd vimenter * NERDTree
+
+" map toggle NERDTree
+map <leader>t :NERDTreeToggle<CR>
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" set highlight search
+set hlsearch
+
