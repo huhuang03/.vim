@@ -1,0 +1,5 @@
+" Youdao transerfer
+Bundle 'ianva/vim-youdao-translater'
+    vnoremap <silent> <C-T> <Esc>:Ydv<CR> 
+    nnoremap <silent> <C-T> <Esc>:Ydc<CR> 
+    noremap <leader>yd :Yde<CR>

@@ -1,3 +1,4 @@
 for vim config sync
 
-now i use .spf13-vim-3, so It's now deprecated.
+now I move to .spf13-vim. so I create link to .vimrc.local and so on
+
