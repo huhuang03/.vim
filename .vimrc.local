@@ -1,5 +1,24 @@
-set background=light
+" set background
+    set background=dark
 
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set fileencoding=utf-8
-set encoding=utf-8
+" set file encode
+    set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+    set fileencoding=utf-8
+    set encoding=utf-8
+
+" set yml ts
+    autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+
+    autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
+    
+" auto fold smali file
+    "autocmd Filetype smali setlocal foldmethod=expr foldexpr=getline(v:lnum)[0]!=\"\\.\"&&getline(v:lnum)[1]!=\"m\"&&getline(v:lnum) [2]!=\"e\"&&getline(v:lnum)[3]!=\"t\"
+
+" run c in vim
+    nnoremap <silent> <F8> :!clear;gcc % -o %:r && ./%:r<CR>
+
+" set smali filetype
+    autocmd BufNewFile,BufRead *.smali set filetype=smali
+
+" practice for learn-vim-script-the-hard-way
+" echo ">^.^<"
