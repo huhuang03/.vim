@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/tonghu/Developer/source/haitao-user-android'
-let g:netrw_dirhist_2='/Users/tonghu/Developer/source/haitao-user-android/HaiTao_User'
-let g:netrw_dirhist_3='/Users/tonghu/Developer/source/haitao-user-android/HaiTao_User/libs'
-let g:netrw_dirhist_4='/Users/tonghu/Developer/source/haitao-user-android/HaiTao_User'
-let g:netrw_dirhist_5='/Users/tonghu/Documents/opt/adt-bundle-mac-x86_64-20140702/sdk/sources/android-21'
-let g:netrw_dirhist_6='/Users/tonghu/Documents/opt/adt-bundle-mac-x86_64-20140702/sdk/sources/android-21/android/os'
-let g:netrw_dirhist_7='/Users/tonghu/Developer/source/learn/designpattern/observer/README.md'
-let g:netrw_dirhist_8='/Users/tonghu/Developer/source/learn/php/day13'
-let g:netrw_dirhist_9='/Users/tonghu/Developer/source/huhuang03.github.io'
+let g:netrw_dirhist_cnt =0
