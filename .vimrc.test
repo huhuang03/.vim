@@ -1,0 +1,2 @@
+" color test
+match ErrorMsg /^Error/

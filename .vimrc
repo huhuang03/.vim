@@ -17,3 +17,8 @@ au BufNewFile,BufRead *.swift set filetype=swift
 if filereadable(expand("~/.vim/.vimrc.plugin"))
     source ~/.vim/.vimrc.plugin
 endif
+
+" Load test
+if filereadable(expand("~/.vim/.vimrc.test"))
+    source ~/.vim/.vimrc.test
+endif
