@@ -1,0 +1,1 @@
+iabbrev for( for(!cursor!;<+++>;<+++>){<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!:

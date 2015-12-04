@@ -1,2 +1,16 @@
 Plugin 'kien/ctrlp.vim'
 Plugin 'toyamarinyon/vim-swift'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+Plugin 'msanders/snipmate.vim'
+Plugin 'altercation/vim-colors-solarized'
+"{
+    syntax enable
+    set background=dark
+    let g:solarized_termcolors=256
+    colorscheme solarized
+"}
+Plugin 'plasticboy/vim-markdown'
+" {
+    let g:vim_markdown_frontmatter=1
+" }
