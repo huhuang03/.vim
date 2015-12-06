@@ -5,5 +5,16 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+" Load plugin
+if filereadable(expand("~/.vim/.vimrc.plugins"))
+    source ~/.vim/.vimrc.plugins
+endif
+
+
 call vundle#end()
 filetype plugin indent on
+
+" Load plugin
+if filereadable(expand("~/.vim/.vimrc.plugins.config"))
+    source ~/.vim/.vimrc.plugins.config
+endif

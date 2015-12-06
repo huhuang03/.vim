@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/tonghu/Developer/source/huhuang03.github.io/_posts'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/tonghu/Documents/have fun/0714/代码/黑马微博39-首页12-时间和来源/黑马微博'
+let g:netrw_dirhist_2='/Users/tonghu/Documents/have fun/0714/代码/黑马微博39-首页12-时间和来源/黑马微博/Classes'
+let g:netrw_dirhist_3='/Users/tonghu/Documents/have fun/0714/代码/黑马微博39-首页12-时间和来源/黑马微博/Classes/Compose(发微博)'
+let g:netrw_dirhist_4='/Users/tonghu/Documents/have fun/0714/代码/黑马微博39-首页12-时间和来源/黑马微博/Classes/Compose(发微博)/Controller'
+let g:netrw_dirhist_5='/Users/tonghu/Developer/source/huhuang03.github.io/_posts'
+let g:netrw_dirhist_6='/Users/tonghu/.vim/bundle/potion/ftdetect'
