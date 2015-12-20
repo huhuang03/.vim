@@ -1,1 +1,13 @@
+" move to next place holder
+nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
+inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+
 iabbrev for( for(!cursor!;<+++>;<+++>){<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!:
+
+iabbrev @@ huhuang03@gmail.com
+iabbrev ccopy Copyright 2013 huhuang03, all rights reserved.
+
+" disable return
+autocmd FileType java :iabbrev <buffer> return NOPENOPENOPE
+
+autocmd FileType java :iabbrev <buffer> rn return

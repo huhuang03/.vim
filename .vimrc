@@ -1,11 +1,10 @@
-" Load vundle
+" Load vundle {{{
 if filereadable(expand("~/.vim/.vimrc.vundle"))
     source ~/.vim/.vimrc.vundle
 endif
+" }}}
 
-
-" Basic setting
-" {
+" Basic setting  {{{
     set tabstop=4 softtabstop=4 expandtab shiftwidth=4
     set nocompatible
     set backspace=indent,eol,start
@@ -15,38 +14,47 @@ endif
     set clipboard=unnamed
     set laststatus=2
     set incsearch
+    set foldmethod=marker
 
-    " some map
-    " {
-        map ,e :Explore .<CR>
-        map ,s :exec 'source ~/.vimrc'<CR>
-        map <c-n> :bn<CR>
-        map <c-p> :bp<CR>
-    " }
     
-    nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
-    inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
-
-    " load abbreviations
-    if filereadable(expand("~/.vim/.vimrc.abbr"))
-        source ~/.vim/.vimrc.abbr
-    endif
-
     " load template
     function! LoadTemplate(extension)
            silent! :execute '0r $VIMHOME/templates/'. a:extension. '.tpl'
           silent! execute 'source $VIMHOME/templates/'.a:extension.'.patterns.tpl'
     endfunction
 
-    autocmd BufNewFile * silent! call LoadTemplate('%:e')
-" }
-   
-    
+    augroup load_template
+        autocmd!
+        autocmd BufNewFile * silent! call LoadTemplate('%:e')
+    augroup end
 
-" Load test
-if filereadable(expand("~/.vim/.vimrc.test"))
-    source ~/.vim/.vimrc.test
-endif
+    augroup common
+        autocmd BufRead *.vimrc.* set filetype=vim
+    augroup end
+" }}}
+
+" Load other vim source {{{
+    " load abbreviations
+    if filereadable(expand("~/.vim/.vimrc.abbr"))
+        source ~/.vim/.vimrc.abbr
+    endif
+       
+    " load map
+    if filereadable(expand("~/.vim/.vimrc.map"))
+        source ~/.vim/.vimrc.map
+    endif
+
+    " load test
+    if filereadable(expand("~/.vim/.vimrc.test"))
+        source ~/.vim/.vimrc.test
+    endif
+"}}}
+
+" UI
+" {
+    " Status bar
+
+" }
 
 " vim learn file
 " * http://learnvimscriptthehardway.onefloweroneworld.com/chapters/43.html
