@@ -5,16 +5,23 @@ endif
 " }}}
 
 " Basic setting  {{{
+    " line number
+    set nu rnu
+
     set tabstop=4 softtabstop=4 expandtab shiftwidth=4
     set nocompatible
     set backspace=indent,eol,start
     let mapleader=","
+    let maplocalleader="\\"
     syntax enable
     au BufNewFile,BufRead *.swift set filetype=swift
     set clipboard=unnamed
     set laststatus=2
     set incsearch
     set foldmethod=marker
+
+    " set help language to cn
+    set helplang=cn
 
     
     " load template
@@ -29,6 +36,7 @@ endif
     augroup end
 
     augroup common
+        autocmd!
         autocmd BufRead *.vimrc.* set filetype=vim
     augroup end
 " }}}

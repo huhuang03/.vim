@@ -1,0 +1,53 @@
+" some map {{{
+    " map space to toggle folder
+    nnoremap <space> za
+
+    nnoremap <leader>e :Explore .<CR>
+    nnoremap <leader>s :exec 'source $MYVIMRC'<CR>
+    nnoremap <leader>v :vsplit $MYVIMRC<cr>
+    noremap <leader>n :bn<CR>
+    noremap <leader>p :bp<CR>
+    " disable before bnext
+    cnoremap bnext <nop>
+    cnoremap bpre <nop>
+    cnoremap bp <nop>
+    cnoremap bn <nop>
+
+    " move current line to above line
+    noremap <leader>_ ddk\|P
+    " move current line to below line
+    noremap <leader>- dd\|p
+    
+    " more to current line head
+    nnoremap <leader>H ^
+    
+    " move to current line end
+    nnoremap <leader>L $
+
+    " change current word to Upcase
+    inoremap <c-u> <Esc>viwUea
+
+    " change current word to Upcase
+    nnoremap <c-u> viwUew
+
+    " change to normal mode in insert mode
+    inoremap jk <esc>
+    " desable esc
+    inoremap <esc> <nop>
+    inoremap <c-[> <nop>
+
+    " delete parasm
+    onoremap p i(
+    onoremap i( <nop>
+
+    " change curent head
+"    augroup markdown
+"        autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$|^--\\+$\r:nohlsearch\rkvg_"<cr>
+"    augroup end
+
+    " todo onoremap to next email in@
+    
+    " map / to /\v ? to ?\v
+    " nnoremap / :exec "/\v"
+"    nnoremap ? :?\v
+" }}}

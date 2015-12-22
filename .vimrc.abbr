@@ -7,7 +7,9 @@ iabbrev for( for(!cursor!;<+++>;<+++>){<cr><+++><cr>}<Esc>:call search('!cursor!
 iabbrev @@ huhuang03@gmail.com
 iabbrev ccopy Copyright 2013 huhuang03, all rights reserved.
 
-" disable return
-autocmd FileType java :iabbrev <buffer> return NOPENOPENOPE
-
-autocmd FileType java :iabbrev <buffer> rn return
+augroup java
+    au!
+    " disable return
+    autocmd FileType java :iabbrev <buffer> return NOPENOPENOPE
+    autocmd FileType java :iabbrev <buffer> rn return
+augroup end
