@@ -1,4 +1,5 @@
-for vim config sync
+my vimrc
 
-now I move to .spf13-vim. so I create link to .vimrc.local and so on
-
+Do the following things:
+* ln .vimrc to .vim/.vimrc
+* sturct .vimrc to .vimrc.xx
