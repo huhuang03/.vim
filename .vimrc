@@ -26,8 +26,9 @@ endif
     
     " load template
     function! LoadTemplate(extension)
-           silent! :execute '0r $VIMHOME/templates/'. a:extension. '.tpl'
-          silent! execute 'source $VIMHOME/templates/'.a:extension.'.patterns.tpl'
+        echom a:extension
+        silent! :execute '0r ~/.vim/templates/'. a:extension. '.tpl'
+        silent! execute 'source ~/.vim/templates/'.a:extension.'.patterns.tpl'
     endfunction
 
     augroup load_template
